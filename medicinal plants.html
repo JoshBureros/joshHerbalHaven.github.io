@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        font-family: cursive;
+        }
+        body {
+    background-image: url('https://st2.depositphotos.com/1020804/9235/i/950/depositphotos_92359752-stock-photo-green-herbs-on-the-green.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(16, 1, 1);
+}
+
+    
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(15, 13, 19, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            color: rgb(84, 240, 76);
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar a {
+            color: rgb(95, 248, 105);
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .plants-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .plant-box {
+           display: flex;
+           background: rgba(255, 255, 255, 0.1);
+           padding: 20px;
+           margin-bottom: 20px;
+           border-radius: 10px;
+           gap: 20px;
+           align-items: center;
+        }
+        .plant-image {
+            width: 250px;
+            height: 180px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .plant-content h2 {
+            color: rgb(4, 5, 5);
+            font-size: 24px;
+        }
+        .read-more {
+            background: rgb(250, 252, 252);
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            background: rgb(34, 237, 47);
+        }
+    </style>
+</head>
+<body> 
+    <header class="header">
+        <a href="index.html" class="logo">HerbalHaven</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="plants-container">
+        <h1 style="text-align: center; color: rgb(14, 17, 17);">List of herbal Plants</h1>
+
+        <div class="plant-box">
+            <img src="https://www.thespruce.com/thmb/3efOEKbsyMR2kA3oDFguPLZTODc=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-696251125-75372e5d9dd0456eb155b82b4d71bc90.jpg" alt="Aloe Vera" class="plant-image">
+            <div class="plant-content">
+                <h2>Aloe Vera</h2>
+                <p>Used for burns, skin conditions, and digestion.</p><br>
+                <a href="aloe-vera.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="plant-box">
+            <img src="https://i.pinimg.com/originals/4e/39/59/4e3959a3bd1ed065862258bf6d893a80.png" alt="Turmeric" class="plant-image">
+            <div class="plant-content">
+                <h2>Turmeric</h2>
+                <p>Known for its anti-inflammatory and antioxidant properties.</p><br>
+                <a href="turmeric.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="plant-box">
+            <img src="https://doubledeckerfarm.com/wp-content/uploads/2022/09/Garlic-beauty-shot-scaled.jpg" alt="Garlic" class="plant-image">
+            <div class="plant-content">                <h2>Garlic</h2>
+                <p>Cooking spice and flavor enhancer
+
+                    Traditional herbal remedy
+                    
+                    Dietary supplement for health support.</p><br>
+                <a href="Garlic (Allium sativum).html" class="read-more">Read More</a>
+            </div>
+    </div>
+    <div class="plant-box">
+        <img src="https://www.passionateaboutfish.co.uk/paf/big_pic/img/product/veg-herbs/ginger1.jpg" alt="Ginger" class="plant-image">        <div class="plant-content">
+            <h2>Ginger</h2>
+            <p>Used for nausea relief, digestion, inflammation, and colds.</p><br>
+            <a href="Ginger.html" class="read-more">Read More</a>
+        </div>
+    </div>
+</body>
+</html>

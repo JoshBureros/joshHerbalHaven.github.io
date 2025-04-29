@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            font-family: cursive;
+        }
+        body {
+    background-image: url('https://st2.depositphotos.com/1020804/9235/i/950/depositphotos_92359752-stock-photo-green-herbs-on-the-green.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(19, 17, 17);
+}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(15, 13, 19, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .plants-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .plant-box {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 300px; 
+}
+
+.plant-image {
+    width: 450px;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    object-fit: cover; 
+    flex-shrink: 0;
+}
+        .plant-content h2 {
+            color: rgb(9, 10, 10);
+            font-size: 24px;
+        }
+        .read-more {
+            background: aqua;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            background: white;
+        }
+    </style>
+</head>
+<body> 
+    <header class="header">
+        <a href="medicinal plants.html" class="logo">Medicinal plants</a>
+    </header>
+
+    <div class="plants-container">
+        <h1 style="text-align: center; color: rgb(5, 5, 5);">Read More</h1>
+
+        <div class="plant-box">
+            <img src="https://doubledeckerfarm.com/wp-content/uploads/2022/09/Garlic-beauty-shot-scaled.jpg" alt="Garlic" class="plant-image">
+            <div class="plant-content">
+                <h2>Garlic</h2>
+                <p>Garlic (Allium sativum) is a popular herb in cooking, known for its distinct aroma and flavor. However, its medicinal uses have been recognized for centuries. Garlic is loaded with nutrients and is believed to provide numerous health benefits.</p>
+        
+                <h3>Medicinal Uses:</h3>
+                <ul>
+                    <li><strong>Boosts Immune System:</strong> Garlic is rich in antioxidants and compounds like allicin, which enhance the immune system's ability to fight infections, colds, and flu.</li>
+                    <li><strong>Reduces Blood Pressure:</strong> Regular consumption of garlic can help manage high blood pressure (hypertension) by promoting blood vessel relaxation and improving blood flow.</li>
+                    <li><strong>Lowers Cholesterol:</strong> Garlic helps reduce levels of total and LDL ("bad") cholesterol in the blood, which is important for heart health and reducing the risk of cardiovascular diseases.</li>
+                    <li><strong>Improves Heart Health:</strong> By lowering cholesterol, reducing blood pressure, and acting as an anti-inflammatory, garlic supports overall heart health and helps reduce the risk of heart disease.</li>
+                    <li><strong>Antibacterial & Antiviral:</strong> Garlic contains natural compounds that have antimicrobial properties. It can help fight infections, including antibiotic-resistant bacteria, and may even alleviate symptoms of viral infections.</li>
+                    <li><strong>Anti-inflammatory Effects:</strong> Garlic's sulfur-containing compounds help reduce inflammation in the body, benefiting those with inflammatory conditions such as arthritis or chronic pain.</li>
+                    <li><strong>Improves Digestion:</strong> Garlic promotes gut health by reducing bloating, improving digestion, and supporting healthy bacteria in the digestive system.</li>
+                    <li><strong>Detoxifies Heavy Metals:</strong> Garlic has been shown to help detoxify the body, particularly by removing heavy metals like lead when consumed in appropriate amounts.</li>
+                </ul>
+        
+                <p>Garlic can be consumed raw, cooked, or as a supplement. It's commonly used in culinary dishes, and its medicinal benefits can be achieved through its incorporation in food or by taking garlic supplements. However, it's important to consult with a healthcare provider if using garlic as a remedy, especially if you have underlying health conditions or are on medication.</p>
+        
+                
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>

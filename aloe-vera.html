@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            font-family: cursive;
+        }
+        body {
+    background-image: url('https://st2.depositphotos.com/1020804/9235/i/950/depositphotos_92359752-stock-photo-green-herbs-on-the-green.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(15, 13, 19, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar a {
+            color: white;   
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .plants-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .plant-box {
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            min-height: 300px; 
+        }
+
+        .plant-image {
+            width: 450px;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: cover; 
+            flex-shrink: 0;
+        }
+        .plant-content h2 {
+            color: rgb(8, 8, 8);
+            font-size: 24px;
+        }
+        .read-more {
+            background: rgb(11, 12, 12);
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            background: white;
+        }
+    </style>
+</head>
+<body> 
+    <header class="header">
+        <a href="medicinal plants.html" class="logo">Medicinal plants</a>
+    </header>
+
+    <div class="plants-container">
+        <h1 style="text-align: center; color: rgb(3, 4, 4);">Aloe-Vera</h1>
+
+        <div class="plant-box">
+            <img src="https://www.thespruce.com/thmb/3efOEKbsyMR2kA3oDFguPLZTODc=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-696251125-75372e5d9dd0456eb155b82b4d71bc90.jpg" alt="Aloe Vera" class="plant-image">
+            <div class="plant-content">
+                <h2>Aloe Vera</h2>
+                <p>Aloe vera (Aloe barbadensis miller) is a succulent plant native to the Arabian Peninsula but cultivated worldwide in tropical and subtropical regions. It has been used for millennia in traditional medicine, cosmetics, and skincare due to its gel and latex, derived from the inner leaf and outer leaf layers, respectively.</p>
+                
+                <h3>Medicinal Uses:</h3>
+                <ul>
+                    <li><strong>Topical Applications:</strong> Aloe vera gel is widely used for its soothing properties on burns, sunburns, and minor wounds. It accelerates healing by reducing inflammation and promoting collagen synthesis.</li>
+                    <li><strong>Skin Conditions:</strong> Due to its anti-inflammatory and antimicrobial properties, aloe vera is known to improve conditions like acne, psoriasis, eczema, and even dandruff.</li>
+                    <li><strong>Dental Health:</strong> Aloe vera mouthwash has been shown to reduce plaque and gingivitis, making it a natural alternative to traditional oral care products.</li>
+                    <li><strong>Digestive Aid:</strong> Aloe vera juice can help soothe the digestive system, alleviate constipation, and promote gut health by acting as a natural laxative.</li>
+                    <li><strong>Immune Boost:</strong> Aloe vera contains antioxidants and polysaccharides that may enhance the immune system and fight off infections.</li>
+                    <li><strong>Anti-Aging:</strong> The antioxidants in aloe vera, including vitamins C and E, help fight free radicals, promoting skin health and reducing the appearance of wrinkles and fine lines.</li>
+                </ul>
+                
+                <p>Aloe vera is widely regarded as a versatile plant with numerous health benefits, but it's important to use it with care. Some individuals may experience allergic reactions, so it is recommended to perform a patch test before using aloe vera topically.</p>
+        
+            </div>
+        </div>
+        
+
+       
+        </div>
+    </div>
+</body>
+</html>

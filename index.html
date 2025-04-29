@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerbalHaven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            font-family: cursive;
+        }
+        body {
+            background: #0f0d13;
+            color: #fcfdfc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-image: url('https://img.freepik.com/premium-photo/green-herbal-background-with-fresh-basil-thyme-mint-rosemary-dill-healthy-plantbased_817921-2473.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            overflow-y: auto;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            background-color: rgba(15, 13, 19, 0.7);
+            border-radius: 10px;
+            z-index: 999;
+        }
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            color: #3cef5d;
+            text-shadow: 0 0 10px #222;
+        }
+        .navbar a {
+            color: #47fc37;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 20px;
+            transition: 0.3s;
+            text-shadow: 0 0 5px #0c0c0c;
+        }
+        .navbar a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px aqua;
+        }
+        .home {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            width: 80%;
+            margin: 100px auto;
+            background-color: rgba(15, 13, 19, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .home-content {
+            max-width: 500px;
+            margin: 20px;
+        }
+        .home-content h3, .home-content p {
+            margin-bottom: 10px;
+            font-size: 30px;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .home-content h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .home-content h3:nth-of-type(2){
+            margin-bottom: 20px;
+        }
+        .home-content h3 span {
+            color: #18f448;
+            text-shadow: 0 0 10px rgba(7, 6, 6, 0.7);
+        }
+        .home-content p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        .glow-container {
+            width: 500px;
+            height: 500px;
+            border-radius: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #3ff827 0%, #69ff44 100%);
+            padding: 10px;
+            box-shadow: 0 0 100px rgba(12, 255, 85, 0.8), 0 0 20px rgba(82, 251, 52, 0.722);
+            margin: 20px;
+        }
+        .glow-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .home-sci a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #04fe14;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #12ff36;
+            text-decoration: none;
+            margin: 30px 15px 0 0;
+            transition: 0.3s;
+        }
+        .home-sci a:hover {
+            background: aqua;
+            color: #0f0d13;
+            box-shadow: 0 0 20px aqua;
+        }
+        .see-more {
+            margin: 30px auto;
+            text-align: center;
+        }
+        .see-more a {
+            padding: 10px 20px;
+            background-color: #3cef5d;
+            color: #000;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 0 10px #3cef5d;
+        }
+        .see-more a:hover {
+            background-color: #2edc4e;
+            box-shadow: 0 0 15px #3cef5d;
+        }
+
+        .plant-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            margin-top: 30px;
+            background-color: rgba(15, 13, 19, 0.7);
+            border-radius: 20px;
+            width: 85%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .plant-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 255, 106, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .plant-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 106, 0.7);
+        }
+        .plant-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .plant-content {
+            padding: 15px;
+            color: #fff;
+        }
+        .plant-content h2 {
+            font-size: 24px;
+            color: #3cef5d;
+        }
+        .plant-content p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .read-more {
+            color: #00ffaa;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .read-more:hover {
+            color: white;
+            text-shadow: 0 0 5px aqua;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+            if (!isLoggedIn || isLoggedIn !== "true") {
+                window.location.href = "login.html?redirect=index.html";
+            }
+
+            const logoutLink = document.createElement("a");
+            logoutLink.textContent = "Logout";
+            logoutLink.href = "#";
+            logoutLink.style.color = "#ff6464";
+            logoutLink.style.marginLeft = "20px";
+            logoutLink.onclick = () => {
+                sessionStorage.removeItem("isLoggedIn");
+                window.location.href = "login.html";
+            };
+
+            document.querySelector(".navbar").appendChild(logoutLink);
+        });
+    </script>
+</head>
+<body> 
+    <header class="header">
+        <a href="index.html" class="logo">HerbalHaven</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="medicinal plants.html">Plants</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Joshua Bureros</h1>
+            <h3>we believe in the timeless wisdom of nature’s remedies. This blog is a sanctuary for plant enthusiasts, wellness seekers, and curious minds who want to explore the healing magic of herbs<span></span><span></span></h3>
+            <p>I'm a Successful Entrepreneur.<br>As a person my advice to you is <strong>eskwela tarung</strong>.</p>
+            <div class="home-sci">
+                <a href="https://www.facebook.com/jovenna.palisoc.omandam/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="glow-container">
+                <img src="IMG20230118141310.jpg" alt="Joshua Bureros Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <section class="plant-section">
+        <div class="plant-box">
+            <img src="https://www.thespruce.com/thmb/3efOEKbsyMR2kA3oDFguPLZTODc=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-696251125-75372e5d9dd0456eb155b82b4d71bc90.jpg" alt="Aloe Vera" class="plant-image">
+            <div class="plant-content">
+                <h2>Aloe Vera</h2>
+                <p>Used for burns, skin conditions, and digestion.</p><br>
+                <a href="aloe-vera.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="plant-box">
+            <img src="https://i.pinimg.com/originals/4e/39/59/4e3959a3bd1ed065862258bf6d893a80.png" alt="Turmeric" class="plant-image">
+            <div class="plant-content">
+                <h2>Turmeric</h2>
+                <p>Known for its anti-inflammatory and antioxidant properties.</p><br>
+                <a href="turmeric.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="plant-box">
+            <img src="https://doubledeckerfarm.com/wp-content/uploads/2022/09/Garlic-beauty-shot-scaled.jpg" alt="Garlic" class="plant-image">
+            <div class="plant-content">
+                <h2>Garlic</h2>
+                <p>Cooking spice and flavor enhancer.<br>
+                   Traditional herbal remedy.<br>
+                   Dietary supplement for health support.</p><br>
+                <a href="Garlic (Allium sativum).html" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="see-more">
+        <a href="medicinal plants.html">See More Plants</a>
+    </div>
+</body>
+</html>

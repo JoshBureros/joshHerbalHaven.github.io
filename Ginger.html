@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Herbal Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            font-family: cursive;
+        }
+        body {
+            background-image: url('https://st2.depositphotos.com/1020804/9235/i/950/depositphotos_92359752-stock-photo-green-herbs-on-the-green.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(19, 17, 17);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(15, 13, 19, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header .logo {
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .plants-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .plant-box {
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            min-height: 300px; 
+        }
+
+        .plant-image {
+            width: 450px;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: cover; 
+            flex-shrink: 0;
+        }
+        .plant-content h2 {
+            color: rgb(7, 8, 8);
+            font-size: 24px;
+        }
+        .read-more {
+            background: aqua;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            background: white;
+        }
+    </style>
+</head>
+<body> 
+    <header class="header">
+        <a href="medicinal plants.html" class="logo">Medicinal plants</a>
+    </header>
+
+    <div class="plants-container">
+        <h1 style="text-align: center; color: rgb(7, 7, 7);">Ginger</h1>
+
+        <div class="plant-box">
+            <img src="https://www.passionateaboutfish.co.uk/paf/big_pic/img/product/veg-herbs/ginger1.jpg" alt="Ginger" class="plant-image">
+            <div class="plant-content">
+                <h2>Ginger</h2>
+                <p>Ginger (Zingiber officinale) is a well-known medicinal root widely used in both traditional and modern medicine. Its active compounds like gingerol and shogaol provide numerous health benefits.</p>
+        
+                <h3>Medicinal Uses:</h3>
+                <ul>
+                    <li><strong>Relieves Nausea:</strong> Highly effective against nausea and motion sickness. Commonly used by pregnant women to reduce morning sickness.</li>
+                    <li><strong>Supports Digestion:</strong> Stimulates saliva and bile production, helping to ease indigestion, bloating, and gas.</li>
+                    <li><strong>Reduces Inflammation:</strong> Contains anti-inflammatory compounds that help manage arthritis and muscle pain.</li>
+                    <li><strong>Fights Cold and Flu:</strong> Has warming properties that can help relieve congestion, sore throat, and cold symptoms.</li>
+                    <li><strong>Boosts Immunity:</strong> Antioxidants in ginger enhance the body’s ability to fight infections.</li>
+                    <li><strong>Lowers Blood Sugar:</strong> May help improve insulin sensitivity and lower blood sugar levels in people with type 2 diabetes.</li>
+                    <li><strong>Improves Brain Function:</strong> Antioxidants and bioactive compounds may protect against age-related cognitive decline.</li>
+                    <li><strong>Alleviates Menstrual Pain:</strong> Known to be as effective as painkillers in reducing menstrual cramps when taken at the start of the menstrual period.</li>
+                </ul>
+        
+                <p>Ginger can be consumed fresh, powdered, or as tea. It's a natural and versatile remedy for several common health issues. However, it's always best to consult a health professional before using it regularly for medical purposes.</p>
+        
+              
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>

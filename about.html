@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | HerbalHaven</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        body {
+            background-image: url('https://st2.depositphotos.com/1020804/9235/i/950/depositphotos_92359752-stock-photo-green-herbs-on-the-green.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: rgb(8, 7, 7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+       
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 13, 19, 0.9);
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            color: rgb(92, 240, 78);
+            text-decoration: none;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .navbar a:hover,
+        .navbar a.active {
+            color: rgb(137, 242, 242);
+        }
+
+      
+        .about-container {
+            max-width: 1000px;
+            margin: 120px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .about-title {
+            font-size: 56px;
+            color: rgb(21, 25, 25);
+            margin-bottom: 20px;
+        }
+        .about-content {
+            font-size: 30px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .about-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: rgb(24, 29, 29);
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .contact-btn:hover {
+            background: rgb(18, 19, 19);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">HerbalHaven</a>
+        <nav class="navbar">
+        </nav>
+    </header>
+    <section class="about-container">
+        <h1 class="about-title">About Our Medicinal Plants Blog</h1>
+        <p class="about-content">
+            Welcome to our Medicinal Plants Blog!  Here, we explore the wonders of nature’s healing plants, sharing valuable information on their benefits and uses.
+        </p>
+        <p class="about-content">
+            Whether you’re a nature lover, herbal enthusiast, or someone looking for natural remedies, our blog offers insights and tips on various medicinal plants.
+            Stay with us and learn how nature can improve health and well-being! 
+        </p>
+        <a href="contact.html" class="contact-btn">Get in Touch</a>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Plants Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+    background-image: url('https://st2.depositphotos.com/1020804/9235/i/950/depositphotos_92359752-stock-photo-green-herbs-on-the-green.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(7, 7, 7);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            background: rgba(15, 13, 19, 0.9);
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        .logo {
+    font-size: 34px;
+    font-weight: bold;
+    color: rgb(90, 252, 76);
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+        .logo:hover {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Enhanced glow on hover */
+        }
+        .navbar a {
+            color: rgb(83, 255, 89);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: 0.3s;
+            font-family: 'Arial', sans-serif;
+            font-weight: normal;
+        }
+        /* Rest of your CSS remains the same */
+        .navbar a:hover {
+            color: rgb(9, 9, 9);
+        }
+        .blog-container {
+            max-width: 1000px;
+            margin: 120px auto;
+            padding: 20px;
+        }
+        .blog-post {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+        .blog-image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 25px;
+        }
+        .blog-content h2 {
+            color: rgb(17, 18, 18);
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+        .blog-content p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0f0d13;
+            background: rgb(14, 15, 15);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            font-family: 'Arial', sans-serif;
+        }
+        .read-more:hover {
+            background: rgb(75, 222, 222);
+            box-shadow: 0 0 10px aqua;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(16, 16, 16);
+            margin-bottom: 40px;
+            font-size: 36px;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body> 
+    <header class="header">
+        <a href="index.html" class="logo">HerbalHaven</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">contact</a>
+         
+        </nav>
+    </header>
+    <div class="blog-container">
+        <h1>Medicinal Plants Blog</h1>
+        <div class="blog-post">
+            <img src="https://doubledeckerfarm.com/wp-content/uploads/2022/09/Garlic-beauty-shot-scaled.jpg" alt="Garlic Bulbs" class="blog-image">
+            <div class="blog-content">
+                <h2>Garlic: Nature's Antibiotic</h2>
+                <p><strong>Scientific Name:</strong> <em>Allium sativum</em></p>
+                <p><strong>Key Benefits:</strong> Boosts immunity, reduces blood pressure, and fights infections due to its <strong>allicin</strong> compound. Used for cardiovascular health and as an antimicrobial agent.</p>
+                <p><strong>How to Use:</strong> Consume raw (best for immunity), cooked in meals, or as aged garlic supplements.</p>
+            </div>
+        </div>
+        <div class="blog-post">
+            <img src="https://i.pinimg.com/originals/4e/39/59/4e3959a3bd1ed065862258bf6d893a80.png" alt="Turmeric Plant" class="blog-image">
+            <div class="blog-content">
+                <h2>Turmeric: The Golden Healer</h2>
+                <p><strong>Scientific Name:</strong> <em>Curcuma longa</em></p>
+                <p><strong>Key Benefits:</strong> Anti-inflammatory, antioxidant, and pain-relieving properties. <strong>Curcumin</strong> (its active compound) helps with arthritis, digestion, and brain health.</p>
+                <p><strong>How to Use:</strong> Mix with black pepper (enhances absorption) in teas, curries, or golden milk.</p>
+            </div>
+        </div>
+        <div class="blog-post">
+            <img src="https://thumbs.dreamstime.com/z/medicinal-plant-lavender-natural-cosmetics-55509091.jpg" alt="Lavender Plant" class="blog-image">
+            <div class="blog-content">
+                <h2>Lavender: The Calming Herb</h2>
+                <p><strong>Scientific Name:</strong> <em>Lavandula angustifolia</em></p>
+                <p><strong>Key Benefits:</strong> Reduces anxiety, improves sleep, and soothes skin irritations. Its <strong>linalool</strong> compound has sedative effects.</p>
+                <p><strong>How to Use:</strong> Essential oil in diffusers, dried flowers in tea, or infused in skincare products.</p>
+            </div>
+        </div>
+<div class="blog-post">
+    <img src="https://www.heart.org/-/media/Images/News/2023/January-2023/0110EIOLIGinger_SC.jpg" alt="Ginger Root" class="blog-image">
+    <div class="blog-content">
+        <h2>Ginger: The Warming Root</h2>
+        <p><strong>Scientific Name:</strong> <em>Zingiber officinale</em></p>
+        <p><strong>Key Benefits:</strong> Treats nausea, aids digestion, and reduces inflammation. Rich in <strong>gingerol</strong>, which has powerful medicinal properties.</p>
+        <p><strong>How to Use:</strong> Fresh in teas and dishes, powdered in capsules, or as an essential oil.</p>
+    </div>
+</div>
+<div class="blog-post">
+    <img src="https://thetop10spot.com/wp-content/uploads/2023/02/neem-fruit-1024x683.jpg" alt="Neem Tree and Fruit" class="blog-image">
+    <div class="blog-content">
+        <h2>Neem: The Village Pharmacy</h2>
+        <p><strong>Scientific Name:</strong> <em>Azadirachta indica</em></p>
+        <p><strong>Key Benefits:</strong> Antibacterial, antifungal, and blood purifying properties. Commonly used in skincare, dental care, and for detoxification.</p>
+        <p><strong>How to Use:</strong> Applied as paste, consumed as tea or capsules, or used in oil form.</p>
+    </div>
+</div>
+<div class="blog-post">
+    <img src="https://cdn.pixabay.com/photo/2016/07/22/09/59/mint-1538297_1280.jpg" alt="Peppermint Leaves" class="blog-image">
+    <div class="blog-content">
+        <h2>Peppermint: The Refreshing Remedy</h2>
+        <p><strong>Scientific Name:</strong> <em>Mentha × piperita</em></p>
+        <p><strong>Key Benefits:</strong> Relieves indigestion, eases headaches, and clears nasal congestion. Contains <strong>menthol</strong>, which has a cooling effect.</p>
+        <p><strong>How to Use:</strong> Brewed in tea, as an essential oil for inhalation, or added to balms and lotions.</p>
+    </div>
+</div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

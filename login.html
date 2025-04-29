@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | HerbalHaven</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+    .landing {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      padding: 20px;
+     
+      border-radius: 8px;
+    }
+    .overlay-content h1 {
+      font-size: 100px;
+      font-style: oblique;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 10px;
+    }
+    .overlay-content p {
+      font-size: 1.1rem;
+      font-style: oblique;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 20px;
+    }
+    .start-btn {
+      background-color: #4a8b29;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .start-btn:hover {
+      background-color: #3a6b21;
+    }
+    .login-form {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: left;
+      margin-top: 20px;
+    }
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a8b29;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4a8b29;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .login-btn:hover {
+      background-color: #3a6b21;
+    }
+    .register-link {
+      text-align: center;
+      display: block;
+      color: #4a8b29;
+      text-decoration: none;
+    }
+    .register-link:hover {
+      text-decoration: underline;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .watch-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    .watch-section h2 {
+      color: #4a8b29;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .plant-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 30px;
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+    .plant-box {
+      background: #eaf6ea;
+      border: 1px solid #c9e1c9;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .plant-box:hover {
+      transform: scale(1.02);
+    }
+
+    .plant-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .plant-content {
+      padding: 15px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .plant-content h2 {
+      color: #4a8b29;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .plant-content p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4a8b29;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .read-more:hover {
+      background-color: #3a6b21;
+    }
+
+    .see-more {
+      text-align: center;
+      margin: 20px 0 60px;
+    }
+
+    .see-more a {
+      color: #4a8b29;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .see-more a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="landing" id="landingPage">
+      <img src="https://img.freepik.com/premium-photo/green-herbal-background-with-fresh-basil-thyme-mint-rosemary-dill-healthy-plantbased_817921-2473.jpg" alt="Green Herbal Background" class="background-image">
+      <div class="overlay-content">
+        <h1>Welcome to HerbalHaven</h1>
+        <p>Your go-to guide for herbal remedies and healing plants.</p>
+        <button class="start-btn" onclick="showLogin()">Login</button>
+      </div>
+    </div>
+    <section class="watch-section">
+      <h2>Watch Herbal Medicine</h2>
+      <div class="video-wrapper">
+        <iframe width="900" height="500" src="https://www.youtube.com/embed/dlHGq6bLbh4?si=ZVdLCp5JKA0gPlVq"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+    <div class="login-form" id="loginFormContainer">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <a href="register.html" class="register-link">Don't have an account? Register</a>
+        <div id="error" class="error"></div>
+      </form>
+    </div>
+  </div>
+  <section class="plant-section">
+    <div class="plant-box">
+      <img src="https://www.thespruce.com/thmb/3efOEKbsyMR2kA3oDFguPLZTODc=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-696251125-75372e5d9dd0456eb155b82b4d71bc90.jpg" alt="Aloe Vera" class="plant-image">
+      <div class="plant-content">
+        <h2>Aloe Vera</h2>
+        <p>Used for burns, skin conditions, and digestion.</p>
+        <a href="aloe-vera.html" class="read-more">Read More</a>
+      </div>
+    </div>
+    <div class="plant-box">
+      <img src="https://i.pinimg.com/originals/4e/39/59/4e3959a3bd1ed065862258bf6d893a80.png" alt="Turmeric" class="plant-image">
+      <div class="plant-content">
+        <h2>Turmeric</h2>
+        <p>Known for its anti-inflammatory and antioxidant properties.</p>
+        <a href="turmeric.html" class="read-more">Read More</a>
+      </div>
+    </div>
+    <div class="plant-box">
+      <img src="https://doubledeckerfarm.com/wp-content/uploads/2022/09/Garlic-beauty-shot-scaled.jpg" alt="Garlic" class="plant-image">
+      <div class="plant-content">
+        <h2>Garlic</h2>
+        <p>
+          Cooking spice and flavor enhancer.<br>
+          Traditional herbal remedy.<br>
+          Dietary supplement for health support.
+        </p>
+        <a href="Garlic (Allium sativum).html" class="read-more">Read More</a>
+      </div>
+    </div>
+  </section>
+  <div class="see-more">
+    <a href="medicinal plants.html">See More Plants</a>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById('landingPage').style.display = 'none';
+      document.getElementById('loginFormContainer').style.display = 'block';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const errorElement = document.getElementById('error');
+
+      const userData = localStorage.getItem('user_' + username);
+
+      if (!userData) {
+        errorElement.textContent = 'Account does not exist. Redirecting to register...';
+        setTimeout(() => {
+          window.location.href = 'register.html';
+        }, 2000);
+        return;
+      }
+
+      const user = JSON.parse(userData);
+
+      if (user.password !== password) {
+        errorElement.textContent = 'Incorrect password';
+        return;
+      }
+
+      sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('username', username);
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>
